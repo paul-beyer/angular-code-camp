@@ -1,0 +1,8 @@
+li .close {
+    visibility: hidden;
+}
+
+li:hover .close {
+    visibility: visible;
+}
+

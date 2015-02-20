@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="cc-fitness">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+</head>
+<body>
+
+<!-- div class="container" ng-controller="ccFitnessController">
+    <header class="page-header">
+        <h1>Code Camp Calorie Counter</h1>
+    </header>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="food in food.foods">
+            {{food.id}} : {{food.text}} ({{food.calorie}} calories {{food.protein}} protein {{food.fat}} fat)
+            <span class="close" ng-click="delete(food)">&times;</span>
+        </li>
+    </ul>
+
+    <input type="text" class="form-control" placeholder="input new food item" ng-model="newFood" ng-keypress="keyPress($event)">
+	
+</div-->
+
+<div class="container" ng-controller="ccFitnessController">
+	<label>Meal Type: <input type="text" class="form-control" placeholder="input new Meal Type" name="mealType" ng-model="newMealType" ng-keypress="keyPress($event)"> </label></br>
+	<label>Food Name: <input type="text" class="form-control" placeholder="input new Food Name" name="foodName" ng-model="newFoodName"> </label></br>
+	<label>Quantity: <input type="text" class="form-control" placeholder="input new Quantity" name="foodQuantity" ng-model="newFoodQuantity"> </label></br>
+	<label>Unit: <input type="text" class="form-control" placeholder="input new Unit" name="foodUnit" ng-model="newFoodUnit"></label></br>
+	<label>Calorie per unit: <input type="text" class="form-control" placeholder="input new Calorie per Unit" name="foodCaloriePerUnit" ng-model="newFoodCaloriePerUnit"></label></br>
+	<label>Total Calorie: <input type="text" class="form-control" placeholder="input new Total Calories" name="foodTotalCalorie" ng-model="newFoodTotalCalorie"></label></br>
+	{{newMealType}} , {{newFoodName}} , {{newFoodQuantity}} , {{newFoodUnit}} , {{newFoodCaloriePerUnit}} , {{newFoodTotalCalorie}}
+	
+	    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="meal in food.foods">
+            {{meal.type}} , {{meal.xyz}} 
+            <span class="close" ng-click="delete(food)">&times;</span>
+        </li>
+    </ul>
+	
+</div>
+
+<script language="javascript" src="js/angular.js"></script>
+<script language="javascript" src="js/underscore.js"></script>
+<script language="javascript" src="js/ccFitness.js"></script>
+
+</body>
+</html>
